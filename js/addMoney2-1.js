@@ -11,7 +11,12 @@ document.getElementById('btn-add-money')
 	//wrong way to verify . do not try it at your serious website
 
 	if(pinNumber === 1234){
-		
+
+		const balance = getTextFieldValueById("account-balance");
+		console.log(balance, addMoney);
+		const newBalance = balance + addMoney;
+
+		document.getElementById('account-balance').innerText = newBalance;
 	}else{
 		alert('failed add the money.')
 	}
